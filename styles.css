@@ -172,11 +172,15 @@ header {
 /* * toggle */
 .toggle {
     position: relative;
-    background: linear-gradient(90deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+    background: var(--toggle);
     border: none;
     width: 60px;
     height: 30px;
     border-radius: 30px;
+}
+
+.toggle.dark-mode {
+    background: linear-gradient(90deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
 }
 
 .ball {
@@ -189,7 +193,7 @@ header {
     right: 3px;
 }
 
-.ball.light {
+.ball.dark-mode {
     position: absolute;
     width: 23px;
     aspect-ratio: 1;
@@ -209,7 +213,7 @@ main {
 
 /* main followers section */
 
-.follower-section-grid {
+.main-section-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(15rem, 1fr));
     grid-template-rows: auto;
@@ -333,4 +337,95 @@ main {
 }
 .red {
     color: var(--Bright-Red);
+}
+
+/*  * media queries */
+
+@media screen and ( width <= 1120px) {    
+/* *tablet */
+
+    .main-section-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(15rem, 1fr));
+        grid-template-rows: auto;
+        gap: 2rem;
+    }
+
+    .header-section-2 {
+        flex-direction: column;
+    }
+    
+}
+
+@media screen and ( width <= 678px) {
+/* *mobile */
+
+    .main-section-grid {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(15rem, 1fr));
+        grid-template-rows: auto;
+        gap: 2rem;
+    }
+
+    header{
+        flex-direction: column;
+        padding: 0;
+    } 
+    .header-section-1 h1{
+        justify-content: flex-start;
+        font-size: 21px;
+    }
+    .header-section-1 {
+        padding-bottom:  .5rem;
+        border-bottom: 4px solid var(--Light-Grayish-Blue);
+    }
+    /* * dark mode border-bottom */
+    .header-section-1.dark-mode {
+        padding-bottom:  .5rem;
+        border-bottom: 2px solid var(--Desaturated-Blue);
+    }
+    .header-section-2 {
+        flex-direction: row;
+        gap: 7rem;
+        padding-top: 1rem;
+    }
+
+    
+}
+
+
+/* * dark-mode color themes */
+
+body.dark-mode {
+    background: var(--Very-Dark-Blue);
+}
+
+.header-section-1.dark-mode h1 {
+    color: white;
+}
+.header-section-1.dark-mode p, .header-section-2.dark-mode p {
+    color: var(--Desaturated-Blue);
+}
+
+.container-followers.dark-mode, 
+.overview-container.dark-mode {
+    background: var(--Dark-Desaturated-Blue);
+}
+
+.container-followers.dark-mode {
+    color: var(--Desaturated-Blue);
+}
+
+.container-followers.dark-mode h1 {
+    color: white;
+}
+
+.overview-heading.dark-mode {
+    color: white;
+}
+.overview-container.dark-mode p:nth-child(01){
+    color: var(--Desaturated-Blue);
+}
+.overview-container.dark-mode h3 {
+    color: white;
 }

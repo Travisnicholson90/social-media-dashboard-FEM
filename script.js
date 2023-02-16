@@ -1,5 +1,4 @@
 //dark mode
-
 const toggle = document.querySelector('.toggle')
 const toggleBall = document.querySelector('.ball')
 const body = document.querySelector('body')

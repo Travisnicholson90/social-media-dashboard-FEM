@@ -1,0 +1,51 @@
+/* * dark-mode color themes */
+
+body.dark-mode {
+    background: var(--Very-Dark-Blue);
+}
+
+.header-section-1.dark-mode h1 {
+    color: white;
+}
+.header-section-1.dark-mode p, .header-section-2.dark-mode p {
+    color: var(--Desaturated-Blue);
+}
+
+.container-followers.dark-mode, 
+.overview-container.dark-mode {
+    background: var(--Dark-Desaturated-Blue);
+}
+
+.container-followers.dark-mode:hover, 
+.overview-container.dark-mode:hover {
+    background: hsl(228, 24%, 34%);
+}
+
+.container-followers.dark-mode {
+    color: var(--Desaturated-Blue);
+}
+
+.container-followers.dark-mode h1 {
+    color: white;
+}
+
+.overview-heading.dark-mode {
+    color: white;
+}
+.overview-container.dark-mode p:nth-child(01){
+    color: var(--Desaturated-Blue);
+}
+.overview-container.dark-mode h3 {
+    color: white;
+}
+
+
+@media screen and (width <= 678px) {
+
+    /* * dark mode border-bottom */
+    .header-section-1.dark-mode {
+        padding-bottom:  .5rem;
+        border-bottom: 2px solid var(--Desaturated-Blue);
+    }
+
+}

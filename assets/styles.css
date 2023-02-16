@@ -29,7 +29,7 @@
 /* Top-BG-Pattern */
 --Very-Dark-Blue: hsl(232, 19%, 15%);
 /* Card-BG */
---Dark-Desaturated-Blue: hsl(228, 28%, 20%);
+--Dark-Desaturated-Blue: hsl(227, 33%, 22%);
 /* text */
 --Desaturated-Blue: hsl(228, 34%, 66%);
 --White-Text: hsl(0, 0%, 100%);
@@ -341,8 +341,8 @@ main {
 
 /*  * media queries */
 
-@media screen and ( width <= 1120px) {    
 /* *tablet */
+@media screen and ( width <= 1120px) {    
 
     .main-section-grid {
         display: grid;
@@ -357,8 +357,8 @@ main {
     
 }
 
-@media screen and ( width <= 678px) {
 /* *mobile */
+@media screen and ( width <= 678px) {
 
     .main-section-grid {
         display: grid;
@@ -379,53 +379,11 @@ main {
         padding-bottom:  .5rem;
         border-bottom: 4px solid var(--Light-Grayish-Blue);
     }
-    /* * dark mode border-bottom */
-    .header-section-1.dark-mode {
-        padding-bottom:  .5rem;
-        border-bottom: 2px solid var(--Desaturated-Blue);
-    }
+
     .header-section-2 {
         flex-direction: row;
         gap: 7rem;
         padding-top: 1rem;
     }
 
-    
-}
-
-
-/* * dark-mode color themes */
-
-body.dark-mode {
-    background: var(--Very-Dark-Blue);
-}
-
-.header-section-1.dark-mode h1 {
-    color: white;
-}
-.header-section-1.dark-mode p, .header-section-2.dark-mode p {
-    color: var(--Desaturated-Blue);
-}
-
-.container-followers.dark-mode, 
-.overview-container.dark-mode {
-    background: var(--Dark-Desaturated-Blue);
-}
-
-.container-followers.dark-mode {
-    color: var(--Desaturated-Blue);
-}
-
-.container-followers.dark-mode h1 {
-    color: white;
-}
-
-.overview-heading.dark-mode {
-    color: white;
-}
-.overview-container.dark-mode p:nth-child(01){
-    color: var(--Desaturated-Blue);
-}
-.overview-container.dark-mode h3 {
-    color: white;
 }
